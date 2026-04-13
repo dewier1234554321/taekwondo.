@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yuksalish School - Taekwondo</title>
+    <style>
+        :root {
+            --primary-blue: #1e3a8a;
+            --secondary-gold: #fbbf24;
+            --light-bg: #f8fafc;
+            --text-dark: #1e293b;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', system-ui, sans-serif;
+        }
+
+        body {
+            background-color: var(--light-bg);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, #2563eb 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+            border-bottom: 6px solid var(--secondary-gold);
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: -40px auto 40px;
+            padding: 0 20px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color: var(--primary-blue);
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.6rem;
+        }
+
+        /* Murabbiy bo'limi */
+        .coach-profile {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .coach-img {
+            width: 200px;
+            height: 200px;
+            border-radius: 20px;
+            object-fit: cover;
+            border: 4px solid var(--secondary-gold);
+        }
+
+        .achievements {
+            flex: 1;
+            list-style: none;
+        }
+
+        .achievements li {
+            margin-bottom: 12px;
+            padding-left: 30px;
+            position: relative;
+        }
+
+        .achievements li::before {
+            content: "🏆";
+            position: absolute;
+            left: 0;
+        }
+
+        /* Jadval bo'limi */
+        .schedule-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .schedule-item {
+            background: #f1f5f9;
+            padding: 20px;
+            border-radius: 12px;
+            border-left: 5px solid var(--primary-blue);
+        }
+
+        .schedule-item h3 {
+            color: var(--primary-blue);
+            margin-bottom: 10px;
+        }
+
+        .time-slot {
+            font-weight: bold;
+            color: #ef4444;
+        }
+
+        /* Aloqa tugmasi */
+        .call-btn {
+            display: block;
+            background: var(--secondary-gold);
+            color: var(--primary-blue);
+            text-align: center;
+            padding: 20px;
+            border-radius: 15px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.4rem;
+            transition: 0.3s;
+            box-shadow: 0 4px 15px rgba(251, 191, 36, 0.3);
+        }
+
+        .call-btn:hover {
+            transform: scale(1.02);
+            background: #f59e0b;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: #64748b;
+        }
+
+        @media (max-width: 600px) {
+            .schedule-grid { grid-template-columns: 1fr; }
+            .coach-profile { text-align: center; justify-content: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>YUKSALISH MAKTABI (UCHTEPA)</h1>
+        <p>Taekwondo WTF - Professional Mashg'ulotlar</p>
+    </header>
+
+    <div class="container">
+        <div class="card">
+            <h2>O`qituvchi haqida malumot</h2>
+            <div class="coach-profile">
+                <img src="photo_2026-04-13_18-37-18.jpg" alt="Sarvarbek Ilhomov" class="coach-img">
+                <div>
+                    <h3>ILHOMOV SARVARBEK</h3>
+                    <p style="color: #64748b; margin-bottom: 15px;">O‘zbekiston sport ustasi</p>
+                    <ul class="achievements">
+                        <li>2-karra O‘zbekiston chempioni</li>
+                        <li>2-karra O‘zbekiston sovrindori</li>
+                        <li>Ko'plab xalqaro turnirlar g'olibi</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Mashg'ulot Vaqtlari</h2>
+            <div class="schedule-grid">
+                <div class="schedule-item">
+                    <h3>Toq kunlari</h3>
+                    <p>Dushanba, Chorshanba, Juma</p>
+                    <p class="time-slot">17:00 – 18:30</p>
+                    <p>yoki</p>
+                    <p class="time-slot">19:00 – 21:00</p>
+                </div>
+                <div class="schedule-item">
+                    <h3>Juft kunlari</h3>
+                    <p>Seshanba, Payshanba, Shanba</p>
+                    <p class="time-slot">17:00 – 18:30</p>
+                    <p>yoki</p>
+                    <p class="time-slot">19:00 – 21:00</p>
+                </div>
+            </div>
+        </div>
+
+        <a href="tel:+998940441676" class="call-btn">
+            📞 TO'GARAKKA YOZILISH: 94 044 16 76
+        </a>
+
+        <footer>
+            Yuksalish Maktabi Uchtepa - Taekwondo To'garagi 2026
+        </footer>
+    </div>
+
+</body>
+</html>
